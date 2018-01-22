@@ -1,17 +1,72 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/imgs/carrinho-compras.jpg">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Matinal</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content class="card-background-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50>
+        <ion-card>
+          <img class="imagem-polarizada" src="assets/imgs/cafe-pilao-500g.jpg">
+          <div class="marca">Pilão</div>
+          <div class="descricao-produto">Café Almofada Pilão 500g</div>
+          <div class="preco-produto">R$ 1,89</div>
+          <div class="botao-quantidade">
+
+            <!--<button ion-button right icon-center>
+              <ion-icon name="remove"></ion-icon>
+            </button>-->
+            <ion-list>
+                <ion-item text-center>
+                  <button ion-button item-start icon-center small>
+                    <ion-icon name="remove"></ion-icon>
+                  </button>
+                  <ion-input type="text" text-center class="total-unidade-produto" name="campo-quantidade" value="0"></ion-input>
+                  <button ion-button item-end icon-center small>
+                    <ion-icon name="add"></ion-icon>
+                  </button>
+                </ion-item>
+              </ion-list>
+          </div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col width-50>
+          <ion-card>
+            <img class="imagem-polarizada" src="assets/imgs/nescau-2-400g.jpg">
+            <div class="marca">Nestlé</div>
+            <div class="descricao-produto">Achocolatado Actigen Nescau 2.0 400g</div>
+            <div class="preco-produto">R$ 2,57</div>
+            <div class="botao-quantidade">
+  
+              <!--<button ion-button right icon-center>
+                <ion-icon name="remove"></ion-icon>
+              </button>-->
+              <ion-list>
+                  <ion-item text-center>
+                    <button ion-button item-start icon-center small onclick="decrementa-quantidade()">
+                      <ion-icon name="remove"></ion-icon>
+                    </button>
+                    <ion-input type="text" text-center class="total-unidade-produto" name="campo-quantidade" value="0"></ion-input>
+                    <button ion-button item-end icon-center small onclick="incrementaQuantidade()">
+                      <ion-icon name="add"></ion-icon>
+                    </button>
+                  </ion-item>
+                </ion-list>
+            </div>
+          </ion-card>
+        </ion-col>      
+
+    </ion-row>
+  </ion-grid>
 </ion-content>
